@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'password-assignment';
+  isDisplayEnabled = false;
+  buttonClickLog = [];
+
+  onButtonClick() {
+    this.isDisplayEnabled = !this.isDisplayEnabled;
+    this.buttonClickLog.push(this.buttonClickLog.length + 1 );
+  }
 }
